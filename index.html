@@ -5,40 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./fe-app/scss/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>MoHarper Registration</title>
   </head>
   <body>
     <div class="content">
-      <h1>User Registration with File Uploader</h1>
       <div class="content__main">
         <div class="content__uploader">
-          <form action="">
-            <input type="text" placeholder="Enter full name" name="" id="" />
+          <form id="userDataForm">
+            <input
+              type="text"
+              placeholder="Enter full name"
+              name="name"
+              id="name"
+            />
             <input
               type="email"
               placeholder="Enter email address"
               name=""
-              id=""
+              id="email"
             />
             <input
               type="file"
-              name="profileUploader"
+              name="photo"
+              id="photo"
               placeholder="Select profile image"
-              id=""
             />
 
-            <button type="submit">Get Started</button>
+            <button id="submit" type="button">Upload/Resize</button>
           </form>
         </div>
         <div class="content__display">
           <div class="round">
-            <div class="small__round__image"></div>
-            <div class="medium__round__image"></div>
-          </div>
+            <div class="image__holder">
+              <img id="round" src="./fe-app/assets/default-pic.png" alt="" />
+            </div>
 
-          <div class="large__image"></div>
+            <div class="imgProperties">
+              <h1 id="roundImageName"></h1>
+              <h2 id="roundImageSize"></h2>
+            </div>
+          </div>
+          <div class="square">
+            <div class="image__holder">
+              <img id="square" src="./fe-app/assets/default-pic.png" alt="" />
+            </div>
+            <div class="imgProperties">
+              <h1 id="squareImageName"></h1>
+              <h2 id="squareImageSize"></h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <script src="./fe-app/js/script.js"></script>
   </body>
 </html>
