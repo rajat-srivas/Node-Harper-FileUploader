@@ -8,22 +8,6 @@ const roundImg = document.getElementById('round');
 const squareImg = document.getElementById('square');
 const buttonHere = document.getElementById('submit');
 
-UpdateDom = (data => {
-    console.log(data.processedFiles[0].internalFileName)
-    roundImg.src = `../../public/img/users/${data.processedFiles[0].internalFileName}`;
-    squareImg.src = `../../public/img/users/${data.processedFiles[1].internalFileName}`;
-    roundName.innerText = data.actualFileName;
-    squareName.innerText = data.actualFileName;
-    roundSize.innerText = data.processedFiles[0].dimension;
-    squareSize.innerText = data.processedFiles[1].dimension;
-})
-
-
-userForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    UploadImages2();
-});
-
 buttonHere.addEventListener('click', (e) => {
     e.preventDefault();
     UploadImages2(e);
@@ -61,4 +45,13 @@ async function GetUploadImages(id) {
         })
 }
 
+UpdateDom = (data => {
+    console.log(data.processedFiles[0].internalFileName)
+    roundImg.src = `../../public/img/users/${data.processedFiles[0].internalFileName}`;
+    squareImg.src = `../../public/img/users/${data.processedFiles[1].internalFileName}`;
+    roundName.innerText = data.actualFileName;
+    squareName.innerText = data.actualFileName;
+    roundSize.innerText = data.processedFiles[0].dimension;
+    squareSize.innerText = data.processedFiles[1].dimension;
+})
 
