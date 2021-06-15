@@ -60,7 +60,7 @@ exports.upload = async (req, res) => {
                 username: req.body.name,
                 email: req.body.email,
                 actualFileName: req.body.actualFileName,
-                actualFizeSize: `${bytes(req.file.size)} KB`,
+                actualFizeSize: `${bytes(req.file.size)}`,
                 processedFiles: [
                     {
                         internalFileName: req.file.filenameRound,

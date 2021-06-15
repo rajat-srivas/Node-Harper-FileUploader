@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -106,7 +107,8 @@ body {
   outline: none;
   color: whitesmoke;
   background-color: transparent;
-  font-size: 12px;
+  font-size: 14px;
+  font-family: "Kanit", sans-serif;
 }
 
 button {
